@@ -4,8 +4,7 @@ echo "  __     __ __           __ LINUX        "
 echo " |  |__ |  |__| _____ __|  | _____ ____  "
 echo " |  _  ||  |  ||     |  _  ||  -__|   _| "
 echo " |_____||__|__||__|__|_____||_____|__|   "
-echo "   A simple LINUX covering track tool    "
-echo "             Written in BASH             "
+echo "   A simple Linux Covering Track tool    "
 echo ""
 
 if [[ $(id -u) != "0" ]]; then
@@ -26,6 +25,10 @@ fi
 
 echo "[*] Checking all files which containing \"${WORD}\"..."
 ALL_FILES=$(grep -Rn "${WORD}" / | awk -F ':' '{print $1}' | sort -V | uniq)
+for LOGFILE in ${ALL_FILES}
+do
+	echo "[i] File ${LOGFILE} containing \"${WORD}\""
+done
 echo "[i] Done! total files is $(echo "${ALL_FILES}" | wc -l)"
 echo ""
 
