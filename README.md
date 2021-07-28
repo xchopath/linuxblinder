@@ -1,2 +1,2 @@
 # linuxblinder
-Simple script to help you do Covering Track in Linux server, rewrite original logs to fake logs (such as IPv4 or other).
+Discover or remove your footsteps in Linux Server. A simple script to help you do basic covering track.
