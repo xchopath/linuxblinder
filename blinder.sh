@@ -27,6 +27,7 @@ fi
 echo "[*] Checking all files which containing \"${WORD}\"..."
 ALL_FILES=$(grep -Rn "${WORD}" / | awk -F ':' '{print $1}' | sort -V | uniq)
 echo "[i] Done! total files is $(echo "${ALL_FILES}" | wc -l)"
+echo ""
 
 echo "[i] Enter a fake"
 echo "[i] Such as fake IPv4 address or something"
